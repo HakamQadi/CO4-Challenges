@@ -1,0 +1,155 @@
+.App-logo {
+  height: 40vmin;
+
+  pointer-events: none;
+}
+
+@media(prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  color: white;
+  background-color: #282c34;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+
+from {
+  transform: rotate(0deg);
+}
+
+to {
+  transform: rotate(360deg);
+}
+
+}
+
+/* ******************** */
+
+.App {
+  /* background-color: red; */
+
+  /* height: 100vh; */
+}
+
+.tweet-container {
+  width: 50rem;
+  margin: 5rem auto 0 auto;
+  padding: 10px;
+
+  text-align: center;
+
+  border: 1px solid #e1e8ed;
+  border-radius: 4px;
+  background-color: rgb(250, 214, 214);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tweet-container textarea {
+  font-size: 16px;
+
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+
+  resize: vertical;
+
+  border: none;
+  outline: none;
+}
+
+.tweet-container .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+
+  /* margin-top: 10px; */
+}
+
+.tweet-container .actions button {
+  font-size: 14px;
+
+  padding: 8px 16px;
+
+  cursor: pointer;
+
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: #1da1f2;
+}
+
+.tweet-container .actions button:hover {
+  background-color: #0c8bf2;
+}
+
+.tweet-container .actions .char-count {
+  font-size: 14px;
+
+  color: #657786;
+}
+
+#btn {
+  font-family: inherit;
+  font-size: inherit;
+
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+
+  padding: 0.5em 1em;
+
+  transition: color 0.4s ease-in-out;
+
+  color: white;
+  border: none;
+  outline: none;
+  background-color: hsl(236, 32%, 26%);
+}
+
+#btn::before {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+
+  width: 1em;
+  height: 1em;
+
+  content: '';
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(-50%, -50%, 0) scale3d( 0, 0, 0);
+  transform-origin: center;
+
+  border-radius: 50%;
+  background-color: #3cefff;
+}
+
+#btn:hover {
+  cursor: pointer;
+
+  color: #161616;
+}
+
+#btn:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d( 15, 15, 15);
+}
